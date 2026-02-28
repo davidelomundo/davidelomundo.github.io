@@ -1,0 +1,44 @@
+{{ define "main" }}
+<header class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content">
+            <h1 class="contact-hero-title">Get In Touch</h1>
+            <p class="contact-hero-subtitle">
+                Have a project in mind? Let's work together to bring your ideas to life.
+            </p>
+        </div>
+    </div>
+</header>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2 class="contact-info-title">Let's Connect</h2>
+                <p class="contact-info-text">
+                    Whether you have a question, a project proposal, or just want to
+                    say hello, I'd love to hear from you. Feel free to reach out through any of these channels.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <h3>Email</h3>
+                        <p><a href="mailto:d.lomundo@icloud.com">d.lomundo@icloud.com</a></p>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Location</h3>
+                        <p>Italy</p>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>GitHub</h3>
+                        <p><a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer">davidelomundo</a></p>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>LinkedIn</h3>
+                        <p><a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">davidelomundo</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

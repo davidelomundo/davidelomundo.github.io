@@ -1,0 +1,23 @@
+<script>
+(function() {
+    // Apply theme based on system preference
+    const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+    };
+    
+    // Get system preference
+    const getSystemTheme = () => {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    
+    // Initialize theme immediately to prevent flash
+    applyTheme(getSystemTheme());
+    
+    // Listen for system preference changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addEventListener('change', (e) => {
+        const newTheme = e.matches ? 'dark' : 'light';
+        applyTheme(newTheme);
+    });
+})();
+</script>

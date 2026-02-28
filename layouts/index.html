@@ -1,0 +1,44 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero-banner">
+    <div class="container">
+        <div class="hero-banner-content">
+            <h1 class="hero-banner-title">Welcome to My Portfolio</h1>
+            <p class="hero-banner-subtitle">Building innovative solutions through code, creativity, and collaboration.</p>
+            <div class="hero-banner-actions">
+                <a href="/projects/" class="btn btn-primary">Explore My Work</a>
+                <a href="/contact/" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Project Section -->
+{{ $featuredProject := (index (where .Site.Data.projects.projects "featured" true) 0) }}
+{{ if $featuredProject }}
+<section class="featured-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Project</h2>
+            <a href="/projects/" class="section-link">View All Projects →</a>
+        </div>
+        {{ partial "project-card.html" (dict "project" $featuredProject "featured" true) }}
+    </div>
+</section>
+{{ end }}
+
+<!-- Latest Journal Section -->
+<section class="articles-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">From the Journal</h2>
+            <a href="/journal/" class="section-link">View All Entries →</a>
+        </div>
+
+        <!-- Coming Soon Message -->
+        <div class="coming-soon-container-home">
+            <p>I'm currently working on thoughtful articles and insights to share with you.</p>
+        </div>
+    </div>
+</section>
+{{ end }}

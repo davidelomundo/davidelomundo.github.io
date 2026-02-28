@@ -1,0 +1,193 @@
+{{ define "main" }}
+<header class="about-hero">
+    <div class="container">
+        <div class="about-hero-content">
+            <h1 class="about-hero-title">About Me</h1>
+            <p class="about-hero-subtitle">Developer and Creator</p>
+        </div>
+    </div>
+</header>
+
+<!-- About Text Section -->
+<section class="about-section about-intro">
+    <div class="container">
+        <div class="about-intro-content">
+            <div class="about-photo-wrapper">
+                <img
+                    src="/images/profile.jpg"
+                    alt="Davide Lo Mundo"
+                    class="about-photo"
+                />
+            </div>
+            <div class="about-text-container">
+                <div class="about-text">
+                    <p>I'm a passionate software engineer with an interest in building innovative solutions 
+                    that make a real impact. With a background in computer science and a love for clean and efficient code, I strive to create applications that are both functional and beautiful.</p>
+                    
+                    <p>I strongly believe that the union of technology, health and nature can improve people's lives.</p>
+                </div>
+                <!--<a href="/resume/Davide_Lo_Mundo_Resume.pdf" download class="btn btn-primary">
+                    <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume
+                </a>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="about-section about-skills">
+    <div class="container">
+        <h2 class="section-title section-title-centered">Skills</h2>
+        <div class="skills-compact">
+            <div class="skill-row" data-accent="blue">
+                <div class="skill-label">
+                    <span class="skill-accent"></span>
+                    <span class="skill-category">Languages</span>
+                </div>
+                <div class="skill-items">
+                    <span class="skill-pill">Go</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">SQL</span>
+                </div>
+            </div>
+            <div class="skill-row" data-accent="cyan">
+                <div class="skill-label">
+                    <span class="skill-accent"></span>
+                    <span class="skill-category">Frontend</span>
+                </div>
+                <div class="skill-items">
+                    <span class="skill-pill">React</span>
+                    <span class="skill-pill">Tailwind CSS</span>
+                    <span class="skill-pill">TypeScript</span>
+                </div>
+            </div>
+            <div class="skill-row" data-accent="purple">
+                <div class="skill-label">
+                    <span class="skill-accent"></span>
+                    <span class="skill-category">AI / ML</span>
+                </div>
+                <div class="skill-items">
+                    <span class="skill-pill">PyTorch</span>
+                    <span class="skill-pill">Deep Learning</span>
+                </div>
+            </div>
+            <div class="skill-row" data-accent="orange">
+                <div class="skill-label">
+                    <span class="skill-accent"></span>
+                    <span class="skill-category">DevOps</span>
+                </div>
+                <div class="skill-items">
+                    <span class="skill-pill">Docker</span>
+                    <span class="skill-pill">Git</span>
+                    <span class="skill-pill">CI/CD</span>
+                    <span class="skill-pill">Bash</span>
+                </div>
+            </div>
+            <div class="skill-row" data-accent="green">
+                <div class="skill-label">
+                    <span class="skill-accent"></span>
+                    <span class="skill-category">Monitoring</span>
+                </div>
+                <div class="skill-items">
+                    <span class="skill-pill">New Relic</span>
+                    <span class="skill-pill">Opsgenie</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section class="about-section about-timeline">
+    <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-period">2025 - Present</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Application Monitoring Engineer</h3>
+                    <p class="timeline-company">Elmec Informatica</p>
+                    <p class="timeline-description">
+                        Working on application monitoring and observability in production environments, focusing on alerting and performance analysis.
+                    </p>
+                    <div class="timeline-technologies">
+                        <span class="technology-tag">Go</span>
+                        <span class="technology-tag">Django</span>
+                        <span class="technology-tag">New Relic</span>
+                        <span class="technology-tag">Opsgenie</span>
+                        <span class="technology-tag">Docker</span>
+                        <span class="technology-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="about-section about-timeline">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-period">2025 - Present</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Master's Degree in Artificial Intelligence</h3>
+                    <p class="timeline-company">University of Trento</p>
+                    <p class="timeline-description">
+                        Focus on software engineering and artificial intelligence.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-period">2021 - 2024</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Bachelor's Degree in Computer Science</h3>
+                    <p class="timeline-company">University of Insubria</p>
+                    <p class="timeline-description">
+                        Foundation in programming, algorithms, and data structures.
+                    </p>
+                    <div class="timeline-technologies">
+                        <span class="technology-tag">Java</span>
+                        <span class="technology-tag">PostgreSQL</span>
+                        <span class="technology-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-period">2016 - 2021</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">High School Diploma in Information Technology and Telecommunications</h3>
+                    <p class="timeline-company">ISIS J.M. Keynes</p>
+                    <p class="timeline-description">
+                        Scientific high school with a focus on mathematics and physics.
+                    </p>
+                    <div class="timeline-technologies">
+                        <span class="technology-tag">C++</span>
+                        <span class="technology-tag">C#</span>
+                        <span class="technology-tag">PHP</span>
+                        <span class="technology-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

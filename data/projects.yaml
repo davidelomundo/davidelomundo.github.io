@@ -1,0 +1,86 @@
+projects:
+  - id: 1
+    image: "/images/projects/image-generation.jpeg"
+    category: "FEATURED PROJECT"
+    date: "March 2025"
+    title: "Image Generation from EEG Signals Using Deep Learning Models"
+    description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals. A two-stage approach was adopted: a GAN for low-resolution image generation (32×32 pixels) and the Enhanced Deep Residual Network (EDSR) for super-resolution up to 128×128 pixels. The EDSR model was trained using the DIV2K dataset and evaluated with PSNR and SSIM metrics."
+    technologies:
+      - "PyTorch"
+      - "Generative Adversarial Networks (GAN)"
+      - "Enhanced Deep Residual Networks (EDSR)"
+    tags:
+      - "Deep Learning"
+      - "Super-Resolution"
+      - "AI Research"
+    github: "https://github.com/davidelomundo/eeg2image-sr"
+    website: ""
+    featured: true
+    
+  - id: 2
+    image: "/images/projects/portfolio-website.jpeg"
+    category: "WEBSITE"
+    date: "February 2026"
+    title: "Personal Portfolio"
+    description: "The current website you are viewing.\nBuilt with Hugo static site generator for blazing fast performance and easy deployment."
+    technologies:
+      - "Hugo"
+      - "CSS"
+    tags:
+      - "Static Website"
+    github: "https://github.com/davidelomundo/davidelomundo.github.io"
+    website: ""
+    featured: false
+    
+  - id: 3
+    image: "/images/projects/playstation-scraper.jpeg"
+    category: "BOT"
+    date: "February 2026"
+    title: "PlayStation Blog Notifier"
+    description: "A stateless backend service written in Go that scrapes the official PlayStation Blog, stores articles in PostgreSQL, and sends formatted Telegram posts for newly published articles. The system is containerized with Docker and designed to run on scheduled intervals."
+    technologies:
+      - "Go"
+      - "PostgreSQL"
+      - "Docker"
+      - "Telegram API"
+    tags:
+      - "Backend"
+      - "Telegram Bot"
+    github: ""
+    website: ""
+    featured: false
+    
+  - id: 4
+    image: "/images/projects/racconti-invisibili.jpeg"
+    category: "INTERACTIVE EXHIBITION"
+    date: "July 2021"
+    title: "Racconti (in)visibili"
+    description: "Contribution to the design and implementation of an interactive control system for a contemporary art exhibition focused on Italy's intangible cultural heritage. The project integrated audiovisual content and immersive technologies to create an engaging and responsive visitor experience."
+    technologies:
+      - "Go"
+      - "OpenCV"
+      - "Python"
+    tags:
+      - "Interactive Art"
+      - "Cultural Heritage"
+    github: ""
+    website: "https://www.visitfermo.it/en/events/racconti-invisibili"
+    featured: false
+    
+  - id: 5
+    image: "/images/projects/instantflow.jpeg"
+    category: "WEB APPLICATION"
+    date: "June 2021"
+    title: "InstantFlow: Netflix-style platform"
+    description: "Developed a full-stack modern streaming platform inspired by Netflix, enabling users to stream movies on-demand after subscribing to a membership. The platform features user authentication, subscription management, movie catalog browsing, and admin tools for content and user management."
+    technologies:
+      - "PHP"
+      - "MariaDB"
+      - "Apache 2"
+      - "JavaScript"
+    tags:
+      - "Streaming"
+      - "Full-Stack"
+    github: "https://github.com/davidelomundo/instantflow"
+    website: ""
+    featured: false

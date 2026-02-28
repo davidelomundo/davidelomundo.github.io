@@ -1,0 +1,50 @@
+{{ $project := .project }}
+{{ $featured := .featured }}
+
+<article class="project-card{{ if $featured }} project-card-featured{{ end }}">
+    <div class="project-card-image-wrapper">
+        {{ if $project.image }}
+        <img 
+            src="{{ $project.image }}" 
+            alt="{{ $project.title }}" 
+            class="project-card-image"
+            loading="lazy"
+        />
+        {{ end }}
+        <div class="project-card-tags">
+            {{ range $project.tags }}
+            <span class="project-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+    <div class="project-card-content">
+        <div class="project-card-header">
+            <span class="project-card-category">{{ $project.category }}</span>
+            <span class="project-card-separator">•</span>
+            <span class="project-card-date">{{ $project.date }}</span>
+        </div>
+        <h3 class="project-card-title">{{ $project.title }}</h3>
+        <p class="project-card-description">{{ $project.description }}</p>
+        
+        <div class="project-card-technologies">
+            <div class="technologies-label">TECHNOLOGIES:</div>
+            <div class="technologies-list">
+                {{ $tech := $project.technologies }}
+                {{ range $index, $item := $tech }}{{ if $index }}, {{ end }}{{ $item }}{{ end }}
+            </div>
+        </div>
+        
+        <div class="project-card-actions">
+            {{ if $project.github }}
+            <a href="{{ $project.github }}" target="_blank" rel="noopener noreferrer" class="project-github-btn">
+                View on GitHub →
+            </a>
+            {{ end }}
+            {{ if $project.website }}
+            <a href="{{ $project.website }}" target="_blank" rel="noopener noreferrer" class="project-github-btn">
+                Visit Website →
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</article>

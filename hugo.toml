@@ -1,0 +1,27 @@
+baseURL = 'https://davidelomundo.github.io/'
+languageCode = 'en-us'
+title = 'Davide Lo Mundo'
+
+[params]
+  author = 'Davide Lo Mundo'
+  description = 'Building innovative solutions through code, creativity, and collaboration.'
+  github = 'https://github.com/davidelomundo'
+  linkedin = 'https://linkedin.com/in/davidelomundo'
+
+[taxonomies]
+  # Disabled — no categories or tags are used
+  
+[permalinks]
+  journal = '/journal/:slug/'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputFormats]
+  [outputFormats.HTML]
+    permalinkable = true
+
+[build]
+  writeStats = true

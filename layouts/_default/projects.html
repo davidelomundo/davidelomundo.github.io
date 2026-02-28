@@ -1,0 +1,35 @@
+{{ define "main" }}
+<header class="projects-hero">
+    <div class="container">
+        <div class="projects-hero-content">
+            <h1 class="projects-hero-title">Projects</h1>
+            <p class="projects-hero-subtitle">
+                Building innovative solutions that make a difference
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Project -->
+{{ $featuredProject := (index (where .Site.Data.projects.projects "featured" true) 0) }}
+{{ if $featuredProject }}
+<section class="projects-featured">
+    <div class="container">
+        {{ partial "project-card.html" (dict "project" $featuredProject "featured" true) }}
+    </div>
+</section>
+{{ end }}
+
+<!-- All Other Projects -->
+<section class="projects-grid-section">
+    <div class="container">
+        <div class="projects-grid">
+            {{ range .Site.Data.projects.projects }}
+                {{ if not .featured }}
+                    {{ partial "project-card.html" (dict "project" . "featured" false) }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

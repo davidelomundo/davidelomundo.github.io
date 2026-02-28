@@ -1,0 +1,123 @@
+/* Apple-style concentric card design for article cards */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-outer);
+  padding: var(--spacing-2);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.article-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.article-card .article-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card .article-card-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.article-card .article-card-excerpt {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-2) 0;
+  flex: 1;
+  white-space: pre-line;
+}
+
+/* Concentric inner image wrapper */
+.article-card .article-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: var(--border-radius-inner);
+  margin-bottom: var(--spacing-2);
+}
+
+.article-card-image-wrapper .article-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.article-card:hover .article-card-image {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .article-card .article-card-image-wrapper {
+    height: 220px;
+  }
+
+  .article-card {
+    padding: var(--spacing-1);
+    border-radius: var(--border-radius-inner);
+  }
+
+  .article-card .article-card-image-wrapper {
+    border-radius: var(--border-radius);
+  }
+}
+
+/* Article Card Content Styling */
+.article-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--spacing-1);
+}
+
+.article-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--spacing-2);
+  font-size: 14px;
+}
+
+.article-card-category {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.5px;
+  color: var(--color-blue);
+}
+
+.article-card-separator {
+  color: var(--color-text-secondary);
+}
+
+.article-card-date {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+.article-card-read-more {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.article-card-read-more:hover {
+  opacity: 0.7;
+}
