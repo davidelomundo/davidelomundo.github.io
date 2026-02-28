@@ -4,13 +4,13 @@
     var(--color-navbar-bg) 0%,
     rgba(255, 255, 255, 0.65) 100%
   );
-  backdrop-filter: saturate(180%) blur(30px);
-  -webkit-backdrop-filter: saturate(180%) blur(30px);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--color-navbar-border);
   box-shadow:
     0 1px 0 0 var(--color-navbar-border),
     0 4px 20px -4px rgba(0, 0, 0, 0.08);
-  padding: 18px 0;
+  padding: 25px 0;
   position: sticky;
   top: 0;
   z-index: 1000;

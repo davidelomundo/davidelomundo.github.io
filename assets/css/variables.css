@@ -1,7 +1,7 @@
 :root {
   /* Light Mode Colors (Default) */
   --color-background: #ffffff;
-  --color-surface: #f5f5f7;
+  --color-surface: #f0f0f3;
   --color-text: #1d1d1f;
   --color-text-secondary: #6e6e73;
   --color-border: #e5e5e7;
@@ -50,8 +50,8 @@
   --border-radius-inner: 16px;
 
   /* Card Shadows */
-  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 24px rgba(0, 0, 0, 0.06);
-  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08), 0 16px 48px rgba(0, 0, 0, 0.1);
+  --card-shadow: none;
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.16), 0 16px 48px rgba(0, 0, 0, 0.22);
 
   /* Transitions */
   --transition: all 0.3s ease;
@@ -61,7 +61,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --color-background: #000000;
-    --color-surface: #1d1d1f;
+    --color-surface: #18181a;
     --color-text: #f5f5f7;
     --color-text-secondary: #a1a1a6;
     --color-border: #424245;
@@ -73,15 +73,15 @@
     --color-navbar-border: rgba(255, 255, 255, 0.08);
     --color-footer-bg: #1d1d1f;
     --color-shadow: rgba(0, 0, 0, 0.5);
-    --card-shadow: 0 2px 8px rgba(255, 255, 255, 0.04), 0 4px 24px rgba(255, 255, 255, 0.06);
-    --card-shadow-hover: 0 8px 24px rgba(255, 255, 255, 0.08), 0 16px 48px rgba(255, 255, 255, 0.1);
+    --card-shadow: none;
+    --card-shadow-hover: 0 8px 24px rgba(255, 255, 255, 0.20), 0 16px 48px rgba(255, 255, 255, 0.28);
   }
 }
 
 /* Manual dark mode override */
 :root[data-theme="dark"] {
   --color-background: #000000;
-  --color-surface: #1d1d1f;
+  --color-surface: #18181a;
   --color-text: #f5f5f7;
   --color-text-secondary: #a1a1a6;
   --color-border: #424245;
@@ -93,8 +93,8 @@
   --color-navbar-border: rgba(255, 255, 255, 0.08);
   --color-footer-bg: #1d1d1f;
   --color-shadow: rgba(0, 0, 0, 0.5);
-  --card-shadow: 0 2px 8px rgba(255, 255, 255, 0.04), 0 4px 24px rgba(255, 255, 255, 0.06);
-  --card-shadow-hover: 0 8px 24px rgba(255, 255, 255, 0.08), 0 16px 48px rgba(255, 255, 255, 0.1);
+  --card-shadow: none;
+  --card-shadow-hover: 0 8px 24px rgba(255, 255, 255, 0.20), 0 16px 48px rgba(255, 255, 255, 0.28);
 }
 
 

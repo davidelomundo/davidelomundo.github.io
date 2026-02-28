@@ -1,12 +1,12 @@
 # Personal Portfolio Website
 
-A modern, Apple-inspired personal portfolio website built with Hugo static site generator. Features a clean design with sections for Home, Projects, Journal, About, and Contact.
+A modern, Apple-inspired personal portfolio website built with Hugo static site generator. Features a clean design with sections for Home, Projects, Journal, About, and Contact with white and dark mode themes and a responsive layout.
 
 ## 🚀 Quick Start
 
 ### Requirements
 
-- [Hugo](https://gohugo.io/installation/)
+- <a href="https://gohugo.io/installation/" target="_blank" rel="noopener noreferrer">Hugo</a>
 
 ### Local Development
 
@@ -42,16 +42,6 @@ The site automatically deploys to GitHub Pages through GitHub Actions workflow d
 2. **Journal Posts**: Add markdown files to `/content/journal/`
 3. **About Page**: Modify `/layouts/_default/about.html`
 4. **Contact Info**: Update `/layouts/_default/contact.html`
-
-### Styling
-
-- Global variables: `/assets/css/variables.css`
-- Component styles: Individual CSS files in `/assets/css/`
-- Colors, fonts, spacing can be customized in variables
-
-### Theme Toggle
-
-The dark/light theme toggle is implemented with vanilla JavaScript in `/layouts/partials/theme-toggle-script.html`. It respects system preferences and remembers user choice in localStorage.
 
 ## 📝 Adding Journal Posts
 
