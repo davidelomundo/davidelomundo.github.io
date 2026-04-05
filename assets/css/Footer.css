@@ -65,6 +65,8 @@
 
 .footer-social a {
   font-size: 24px;
+  color: var(--color-text);
+  transition: color 0.3s;
 }
 
 .footer-links a:hover,

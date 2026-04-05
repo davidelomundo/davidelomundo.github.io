@@ -1,9 +1,9 @@
 /* Hero Banner */
 .hero-banner {
   background: linear-gradient(
-    135deg,
-    var(--color-hero-gradient-start) 0%,
-    var(--color-hero-gradient-end) 100%
+    180deg,
+    var(--color-background) 0%,
+    var(--color-surface) 100%
   );
   padding: 120px 0 100px;
   position: relative;
@@ -14,11 +14,12 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)" /></svg>');
-  opacity: 0.5;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .hero-banner-content {
@@ -32,7 +33,7 @@
 .hero-banner-title {
   font-size: 72px;
   font-weight: var(--font-weight-bold);
-  color: white;
+  color: var(--color-text);
   letter-spacing: -0.03em;
   margin: 0 0 var(--spacing-3) 0;
   line-height: 1.1;
@@ -40,7 +41,7 @@
 
 .hero-banner-subtitle {
   font-size: 24px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-secondary);
   margin: 0 0 var(--spacing-5) 0;
   line-height: 1.5;
 }

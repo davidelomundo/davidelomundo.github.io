@@ -3,7 +3,7 @@ projects:
     image: "/images/projects/image-generation.jpeg"
     category: "FEATURED PROJECT"
     date: "March 2025"
-    title: "Image Generation from EEG Signals Using Deep Learning Models"
+    title: "Image Generation from EEG Signals"
     description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals. A two-stage approach was adopted: a GAN for low-resolution image generation (32×32 pixels) and the Enhanced Deep Residual Network (EDSR) for super-resolution up to 128×128 pixels. The EDSR model was trained using the DIV2K dataset and evaluated with PSNR and SSIM metrics."
     technologies:
       - "PyTorch"
@@ -13,7 +13,7 @@ projects:
       - "Deep Learning"
       - "Super-Resolution"
       - "AI Research"
-    github: "https://github.com/davidelomundo/eeg2image-sr"
+    github: "https://github.com/davidelomundo/eeg-to-image"
     website: ""
     featured: true
     
@@ -72,7 +72,7 @@ projects:
     category: "WEB APPLICATION"
     date: "June 2021"
     title: "InstantFlow: Netflix-style platform"
-    description: "Developed a full-stack modern streaming platform inspired by Netflix, enabling users to stream movies on-demand after subscribing to a membership. The platform features user authentication, subscription management, movie catalog browsing, and admin tools for content and user management."
+    description: "Developed a full-stack modern streaming platform inspired by Netflix, enabling users to stream movies on-demand after subscribing to a membership. The platform features user authentication, secure payment processing, movie catalog browsing, and admin tools for content and user management."
     technologies:
       - "PHP"
       - "MariaDB"
