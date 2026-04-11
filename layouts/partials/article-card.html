@@ -1,23 +1,25 @@
-<article class="article-card">
-    <a href="{{ .RelPermalink }}" class="article-card-link">
+{{ $category := .Params.category }}
+{{ $excerpt := .Params.excerpt | default (.Summary | plainify | truncate 160) }}
+
+<article class="article-card-container">
+    <a href="{{ .RelPermalink }}" class="article-card{{ if not .Params.image }} article-card-no-image{{ end }}">
         {{ if .Params.image }}
         <div class="article-card-image-wrapper">
-            <img 
-                src="{{ .Params.image }}" 
+            <img
+                src="{{ .Params.image }}"
                 alt="{{ .Title }}"
                 class="article-card-image"
                 loading="lazy"
             />
         </div>
         {{ end }}
+
         <div class="article-card-content">
             <div class="article-card-header">
-                <span class="article-card-category">{{ .Params.category }}</span>
-                <span class="article-card-date">Posted on {{ .Date.Format "January 2, 2006" }}</span>
+                <span class="article-card-date">{{ .Date.Format "January 2, 2006" }}</span>
             </div>
             <h3 class="article-card-title">{{ .Title }}</h3>
-            <p class="article-card-excerpt">{{ .Params.excerpt }}</p>
-            <span class="article-card-read-more">Read More →</span>
+            <p class="article-card-excerpt">{{ $excerpt }}</p>
         </div>
     </a>
 </article>

@@ -1,0 +1,37 @@
+<script>
+(function() {
+    const flipContainers = document.querySelectorAll('.project-card-flip');
+    const closeButtons = document.querySelectorAll('.project-card-close-btn');
+    
+    flipContainers.forEach(container => {
+        // Make the card clickable
+        container.style.cursor = 'pointer';
+        
+        container.addEventListener('click', function(e) {
+            // Don't flip if clicking on the close button
+            if (e.target.closest('.project-card-close-btn')) {
+                return;
+            }
+            
+            // Don't flip if clicking on links
+            if (e.target.closest('a')) {
+                return;
+            }
+            
+            e.preventDefault();
+            const isFlipped = this.getAttribute('data-flipped') === 'true';
+            this.setAttribute('data-flipped', !isFlipped);
+        });
+    });
+    
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const flipContainer = this.closest('.project-card-flip');
+            flipContainer.setAttribute('data-flipped', 'false');
+        });
+    });
+})();
+</script>

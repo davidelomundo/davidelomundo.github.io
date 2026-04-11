@@ -1,50 +1,65 @@
 {{ $project := .project }}
 {{ $featured := .featured }}
 
-<article class="project-card{{ if $featured }} project-card-featured{{ end }}">
-    <div class="project-card-image-wrapper">
-        {{ if $project.image }}
-        <img 
-            src="{{ $project.image }}" 
-            alt="{{ $project.title }}" 
-            class="project-card-image"
-            loading="lazy"
-        />
-        {{ end }}
-        <div class="project-card-tags">
-            {{ range $project.tags }}
-            <span class="project-tag">{{ . }}</span>
-            {{ end }}
-        </div>
-    </div>
-    <div class="project-card-content">
-        <div class="project-card-header">
-            <span class="project-card-category">{{ $project.category }}</span>
-            <span class="project-card-separator">•</span>
-            <span class="project-card-date">{{ $project.date }}</span>
-        </div>
-        <h3 class="project-card-title">{{ $project.title }}</h3>
-        <p class="project-card-description">{{ $project.description }}</p>
-        
-        <div class="project-card-technologies">
-            <div class="technologies-label">TECHNOLOGIES:</div>
-            <div class="technologies-list">
-                {{ $tech := $project.technologies }}
-                {{ range $index, $item := $tech }}{{ if $index }}, {{ end }}{{ $item }}{{ end }}
+<article class="project-card-container{{ if $featured }} project-card-featured-container{{ end }}">
+    <div class="project-card-flip" data-flipped="false">
+        <!-- Front of card -->
+        <div class="project-card project-card-front{{ if $featured }} project-card-featured{{ end }}">
+            <div class="project-card-image-wrapper">
+                {{ if $project.image }}
+                <img 
+                    src="{{ $project.image }}" 
+                    alt="{{ $project.title }}" 
+                    class="project-card-image"
+                    loading="lazy"
+                />
+                {{ end }}
+                <div class="project-card-tags">
+                    {{ range $project.tags }}
+                    <span class="project-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="project-card-content">
+                <div class="project-card-header">
+                    <span class="project-card-category">{{ $project.category }}</span>
+                    <span class="project-card-separator">•</span>
+                    <span class="project-card-date">{{ $project.date }}</span>
+                </div>
+                <h3 class="project-card-title">{{ $project.title }}</h3>
+                <p class="project-card-description">{{ $project.description }}</p>
             </div>
         </div>
-        
-        <div class="project-card-actions">
-            {{ if $project.github }}
-            <a href="{{ $project.github }}" target="_blank" rel="noopener noreferrer" class="project-github-btn">
-                View on GitHub →
-            </a>
-            {{ end }}
-            {{ if $project.website }}
-            <a href="{{ $project.website }}" target="_blank" rel="noopener noreferrer" class="project-github-btn">
-                Visit Website →
-            </a>
-            {{ end }}
+
+        <!-- Back of card -->
+        <div class="project-card project-card-back{{ if $featured }} project-card-featured{{ end }}">
+            <div class="project-card-back-content">
+                <button class="project-card-close-btn" aria-label="Close expanded view">
+                    <i class="fas fa-xmark close-icon" aria-hidden="true"></i>
+                </button>
+                <h2 class="project-card-back-title">{{ $project.title }}</h2>
+                <div class="project-card-back-details">
+                    <div class="detail-section">
+                        <p>{{ $project.description }}</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Technologies</h4>
+                        <p>{{ $tech := $project.technologies }}{{ range $index, $item := $tech }}{{ if $index }}, {{ end }}{{ $item }}{{ end }}</p>
+                    </div>
+                </div>
+                <div class="project-card-back-actions">
+                    {{ if $project.github }}
+                    <a href="{{ $project.github }}" target="_blank" rel="noopener noreferrer" class="project-github-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    {{ end }}
+                    {{ if $project.website }}
+                    <a href="{{ $project.website }}" target="_blank" rel="noopener noreferrer" class="project-github-btn">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Website
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
         </div>
     </div>
 </article>

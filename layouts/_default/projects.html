@@ -11,7 +11,7 @@
 </header>
 
 <!-- Featured Project -->
-{{ $featuredProject := (index (where .Site.Data.projects.projects "featured" true) 0) }}
+{{ $featuredProject := (index (where hugo.Data.projects.projects "featured" true) 0) }}
 {{ if $featuredProject }}
 <section class="projects-featured">
     <div class="container">
@@ -24,7 +24,7 @@
 <section class="projects-grid-section">
     <div class="container">
         <div class="projects-grid">
-            {{ range .Site.Data.projects.projects }}
+            {{ range hugo.Data.projects.projects }}
                 {{ if not .featured }}
                     {{ partial "project-card.html" (dict "project" . "featured" false) }}
                 {{ end }}

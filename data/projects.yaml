@@ -4,7 +4,7 @@ projects:
     category: "FEATURED PROJECT"
     date: "March 2025"
     title: "Image Generation from EEG Signals"
-    description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals. A two-stage approach was adopted: a GAN for low-resolution image generation (32×32 pixels) and the Enhanced Deep Residual Network (EDSR) for super-resolution up to 128×128 pixels. The EDSR model was trained using the DIV2K dataset and evaluated with PSNR and SSIM metrics."
+    description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals. A two-stage approach was adopted: a GAN for low-resolution image generation and the Enhanced Deep Residual Network (EDSR) for super-resolution."
     technologies:
       - "PyTorch"
       - "Generative Adversarial Networks (GAN)"
@@ -22,7 +22,7 @@ projects:
     category: "WEBSITE"
     date: "February 2026"
     title: "Personal Portfolio"
-    description: "The current website you are viewing.\nBuilt with Hugo static site generator for blazing fast performance and easy deployment."
+    description: "The current website you are viewing. Built with Hugo static site generator for blazing fast performance and easy deployment."
     technologies:
       - "Hugo"
       - "CSS"
