@@ -1,4 +1,3 @@
-{{ $category := .Params.category }}
 {{ $excerpt := .Params.excerpt | default (.Summary | plainify | truncate 160) }}
 
 <article class="article-card-container">

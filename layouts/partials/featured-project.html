@@ -1,0 +1,5 @@
+{{- $featuredProjects := where hugo.Data.projects.projects "featured" true -}}
+{{- if gt (len $featuredProjects) 0 -}}
+{{- $featuredProject := index $featuredProjects 0 -}}
+{{ partial "project-card.html" (dict "project" $featuredProject "featured" true) }}
+{{- end -}}

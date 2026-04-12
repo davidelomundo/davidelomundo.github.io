@@ -87,45 +87,6 @@
   transform: scale(1.08);
 }
 
-.article-card-tags {
-  position: absolute;
-  bottom: var(--spacing-2);
-  left: var(--spacing-2);
-  right: var(--spacing-2);
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  z-index: 2;
-}
-
-.article-tag {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--color-text);
-  padding: 5px 12px;
-  border-radius: 16px;
-  font-size: 11px;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.3px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-[data-theme="dark"] .article-tag {
-  background: rgba(29, 29, 31, 0.9);
-  color: var(--color-text);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .article-tag {
-    background: rgba(29, 29, 31, 0.9);
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-}
-
 .article-card-content {
   display: flex;
   flex-direction: column;
@@ -146,19 +107,6 @@
   margin-bottom: var(--spacing-3);
   font-size: 14px;
   letter-spacing: 0.5px;
-}
-
-.article-card-category {
-  text-transform: uppercase;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.6px;
-  color: var(--color-blue);
-  font-size: 13px;
-}
-
-.article-card-separator {
-  color: var(--color-text-secondary);
-  font-weight: 300;
 }
 
 .article-card-date {
@@ -184,34 +132,6 @@
   flex: 1;
   white-space: pre-line;
   font-weight: var(--font-weight-normal);
-}
-
-.article-card-read-more {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: var(--color-blue);
-  font-size: 14px;
-  font-weight: var(--font-weight-semibold);
-  padding: 8px 12px;
-  border-radius: var(--border-radius-inner);
-  transition: all 0.3s ease;
-  background: rgba(0, 113, 227, 0.05);
-  width: fit-content;
-}
-
-.article-card:hover .article-card-read-more {
-  background: rgba(0, 113, 227, 0.12);
-  transform: translateY(-2px);
-}
-
-[data-theme="dark"] .article-card-read-more {
-  background: rgba(10, 132, 255, 0.08);
-}
-
-[data-theme="dark"] .article-card:hover .article-card-read-more {
-  background: rgba(10, 132, 255, 0.15);
 }
 
 @media (max-width: 768px) {

@@ -1,9 +1,9 @@
 {{ define "main" }}
-<header class="articles-hero">
+<header class="page-hero">
     <div class="container">
-        <div class="articles-hero-content">
-            <h1 class="articles-hero-title">Journal</h1>
-            <p class="articles-hero-subtitle">
+        <div class="page-hero-content">
+            <h1 class="page-hero-title">Journal</h1>
+            <p class="page-hero-subtitle">
                 Thoughts, insights, and updates from my journey
             </p>
         </div>
@@ -13,10 +13,9 @@
 <section class="articles-list-section">
     <div class="container">
         <div class="articles-grid">
-            {{ range .Pages }}
-                {{ if not .Draft }}
-                    {{ partial "article-card.html" . }}
-                {{ end }}
+            {{ $publishedPages := where .RegularPages "Draft" false }}
+            {{ range $publishedPages }}
+                {{ partial "article-card.html" . }}
             {{ end }}
         </div>
     </div>

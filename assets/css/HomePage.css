@@ -103,14 +103,6 @@
   margin-top: var(--spacing-4);
 }
 
-.coming-soon-container-home {
-  text-align: center;
-  padding: var(--spacing-6);
-  font-size: 18px;
-  color: var(--color-text-secondary);
-  line-height: 1.8;
-}
-
 @media (max-width: 768px) {
   .hero-banner {
     padding: 80px 0 60px;

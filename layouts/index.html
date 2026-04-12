@@ -14,15 +14,14 @@
 </section>
 
 <!-- Featured Project Section -->
-{{ $featuredProject := (index (where hugo.Data.projects.projects "featured" true) 0) }}
-{{ if $featuredProject }}
+{{ with partial "featured-project.html" . }}
 <section class="featured-section">
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">Featured Project</h2>
             <a href="/projects/" class="section-link">View All Projects →</a>
         </div>
-        {{ partial "project-card.html" (dict "project" $featuredProject "featured" true) }}
+        {{ . }}
     </div>
 </section>
 {{ end }}
@@ -36,10 +35,10 @@
         </div>
 
         <div class="articles-grid">
-            {{ range first 3 (where .Site.RegularPages "Section" "journal") }}
-                {{ if not .Draft }}
-                    {{ partial "article-card.html" . }}
-                {{ end }}
+            {{ $journalPages := where .Site.RegularPages "Section" "journal" }}
+            {{ $publishedJournalPages := where $journalPages "Draft" false }}
+            {{ range first 3 $publishedJournalPages }}
+                {{ partial "article-card.html" . }}
             {{ end }}
         </div>
     </div>
