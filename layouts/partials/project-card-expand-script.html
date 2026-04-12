@@ -1,15 +1,52 @@
 <script>
 (function() {
     const flipContainers = document.querySelectorAll('.project-card-flip');
-    const closeButtons = document.querySelectorAll('.project-card-close-btn');
+    const FLIP_ANIMATION_FALLBACK_MS = 900;
+    const flipTimers = new WeakMap();
+
+    function clearFlipTimer(container) {
+        const timer = flipTimers.get(container);
+        if (timer) {
+            window.clearTimeout(timer);
+        }
+    }
+
+    function setAnimating(container, isAnimating) {
+        container.setAttribute('data-animating', isAnimating ? 'true' : 'false');
+    }
+
+    function setFlippedState(container, shouldFlip) {
+        const nextState = shouldFlip ? 'true' : 'false';
+        if (container.getAttribute('data-flipped') === nextState) {
+            return;
+        }
+
+        setAnimating(container, true);
+        container.setAttribute('data-flipped', nextState);
+
+        clearFlipTimer(container);
+        const timer = window.setTimeout(function() {
+            setAnimating(container, false);
+        }, FLIP_ANIMATION_FALLBACK_MS);
+        flipTimers.set(container, timer);
+    }
     
     flipContainers.forEach(container => {
         // Make the card clickable
         container.style.cursor = 'pointer';
+        setAnimating(container, false);
+
+        container.addEventListener('transitionend', function(e) {
+            if (e.target !== container || e.propertyName !== 'transform') {
+                return;
+            }
+
+            clearFlipTimer(container);
+            setAnimating(container, false);
+        });
         
         container.addEventListener('click', function(e) {
-            // Don't flip if clicking on the close button
-            if (e.target.closest('.project-card-close-btn')) {
+            if (this.getAttribute('data-animating') === 'true') {
                 return;
             }
             
@@ -20,17 +57,7 @@
             
             e.preventDefault();
             const isFlipped = this.getAttribute('data-flipped') === 'true';
-            this.setAttribute('data-flipped', !isFlipped);
-        });
-    });
-    
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const flipContainer = this.closest('.project-card-flip');
-            flipContainer.setAttribute('data-flipped', 'false');
+            setFlippedState(this, !isFlipped);
         });
     });
 })();
