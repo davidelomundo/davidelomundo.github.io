@@ -104,27 +104,13 @@
   opacity: 1;
 }
 
-[data-theme="dark"] .project-card {
-  background-color: var(--color-card-bg);
-  border-color: rgba(255, 255, 255, 0.05);
-}
-
-[data-theme="dark"] .project-card-flip[data-flipped="false"] .project-card-front:hover,
-[data-theme="dark"] .project-card-flip[data-flipped="true"] .project-card-back:hover {
-  box-shadow: 
-    0 20px 40px rgba(255, 255, 255, 0.15),
-    0 8px 16px rgba(255, 255, 255, 0.1),
-    0 2px 4px rgba(255, 255, 255, 0.05);
-  border-color: rgba(10, 132, 255, 0.3);
-}
-
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .project-card {
+  .project-card {
     border-color: rgba(255, 255, 255, 0.05);
   }
 
-  :root:not([data-theme="light"]) .project-card-flip[data-flipped="false"] .project-card-front:hover,
-  :root:not([data-theme="light"]) .project-card-flip[data-flipped="true"] .project-card-back:hover {
+  .project-card-flip[data-flipped="false"] .project-card-front:hover,
+  .project-card-flip[data-flipped="true"] .project-card-back:hover {
     box-shadow: 
       0 20px 40px rgba(255, 255, 255, 0.15),
       0 8px 16px rgba(255, 255, 255, 0.1),
@@ -196,15 +182,8 @@
   transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .project-tag {
-  background: rgba(29, 29, 31, 0.9);
-  color: var(--color-text);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-}
-
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .project-tag {
+  .project-tag {
     background: rgba(29, 29, 31, 0.9);
     border-color: rgba(255, 255, 255, 0.1);
   }
@@ -311,20 +290,12 @@
   transform: translateY(-2px);
 }
 
-[data-theme="dark"] .project-github-btn {
-  background: rgba(10, 132, 255, 0.08);
-}
-
-[data-theme="dark"] .project-github-btn:hover {
-  background: rgba(10, 132, 255, 0.15);
-}
-
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .project-github-btn {
+  .project-github-btn {
     background: rgba(10, 132, 255, 0.08);
   }
 
-  :root:not([data-theme="light"]) .project-github-btn:hover {
+  .project-github-btn:hover {
     background: rgba(10, 132, 255, 0.15);
   }
 }
