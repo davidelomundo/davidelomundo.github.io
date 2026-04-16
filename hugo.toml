@@ -10,9 +10,6 @@ disableKinds = ['taxonomy', 'term']
   github = 'https://github.com/davidelomundo'
   linkedin = 'https://linkedin.com/in/davidelomundo'
 
-[taxonomies]
-  # Disabled — no categories or tags are used
-  
 [permalinks]
   journal = '/journal/:slug/'
 
