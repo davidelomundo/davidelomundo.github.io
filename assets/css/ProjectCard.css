@@ -96,7 +96,7 @@
     0 20px 40px rgba(0, 0, 0, 0.15),
     0 8px 16px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 113, 227, 0.2);
+  border-color: rgba(0, 113, 227, 0.5);
 }
 
 .project-card-flip[data-flipped="false"] .project-card-front:hover::before,
