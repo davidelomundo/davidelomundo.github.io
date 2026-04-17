@@ -181,3 +181,15 @@ p {
 .project-card {
   animation: fadeIn 0.3s ease-out;
 }
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+.app-container > main {
+  flex: 1;
+}
