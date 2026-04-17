@@ -10,10 +10,6 @@ projects:
       - "PyTorch"
       - "Generative Adversarial Networks (GAN)"
       - "Enhanced Deep Residual Networks (EDSR)"
-    tags:
-      - "Deep Learning"
-      - "Super-Resolution"
-      - "AI Research"
     github: "https://github.com/davidelomundo/eeg-to-image"
     featured: true
     
@@ -27,8 +23,6 @@ projects:
     technologies:
       - "Hugo"
       - "CSS"
-    tags:
-      - "Static Website"
     github: "https://github.com/davidelomundo/davidelomundo.github.io"
     featured: false
     
@@ -44,9 +38,6 @@ projects:
       - "PostgreSQL"
       - "Docker"
       - "Telegram API"
-    tags:
-      - "Backend"
-      - "Telegram Bot"
     featured: false
     
   - id: 4
@@ -60,9 +51,6 @@ projects:
       - "Go"
       - "OpenCV"
       - "Python"
-    tags:
-      - "Interactive Art"
-      - "Cultural Heritage"
     website: "https://www.visitfermo.it/en/events/racconti-invisibili"
     featured: false
     
@@ -78,8 +66,5 @@ projects:
       - "MariaDB"
       - "Apache 2"
       - "JavaScript"
-    tags:
-      - "Streaming"
-      - "Full-Stack"
     github: "https://github.com/davidelomundo/instantflow"
     featured: false
