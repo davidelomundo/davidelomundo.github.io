@@ -1,6 +1,6 @@
 ---
 title: "Erasmus: a new chapter in Norway"
-date: 2026-04-11
+date: 2026-04-17
 draft: false
 category: "Journal"
 image: "/images/articles/norway.jpeg"

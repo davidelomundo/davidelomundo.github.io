@@ -15,7 +15,6 @@ projects:
       - "Super-Resolution"
       - "AI Research"
     github: "https://github.com/davidelomundo/eeg-to-image"
-    website: ""
     featured: true
     
   - id: 2
@@ -31,7 +30,6 @@ projects:
     tags:
       - "Static Website"
     github: "https://github.com/davidelomundo/davidelomundo.github.io"
-    website: ""
     featured: false
     
   - id: 3
@@ -49,8 +47,6 @@ projects:
     tags:
       - "Backend"
       - "Telegram Bot"
-    github: ""
-    website: ""
     featured: false
     
   - id: 4
@@ -67,7 +63,6 @@ projects:
     tags:
       - "Interactive Art"
       - "Cultural Heritage"
-    github: ""
     website: "https://www.visitfermo.it/en/events/racconti-invisibili"
     featured: false
     
@@ -87,5 +82,4 @@ projects:
       - "Streaming"
       - "Full-Stack"
     github: "https://github.com/davidelomundo/instantflow"
-    website: ""
     featured: false

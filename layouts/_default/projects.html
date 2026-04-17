@@ -1,14 +1,5 @@
 {{ define "main" }}
-<header class="page-hero">
-    <div class="container">
-        <div class="page-hero-content">
-            <h1 class="page-hero-title">Projects</h1>
-            <p class="page-hero-subtitle">
-                Building innovative solutions that make a difference
-            </p>
-        </div>
-    </div>
-</header>
+{{ partial "page-hero.html" (dict "title" "Projects" "subtitle" "Building innovative solutions that make a difference") }}
 
 <!-- Featured Project -->
 {{ with partial "featured-project.html" . }}

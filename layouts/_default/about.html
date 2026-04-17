@@ -1,12 +1,5 @@
 {{ define "main" }}
-<header class="page-hero">
-    <div class="container">
-        <div class="page-hero-content">
-            <h1 class="page-hero-title">About Me</h1>
-            <p class="page-hero-subtitle">Developer and Creator</p>
-        </div>
-    </div>
-</header>
+{{ partial "page-hero.html" (dict "title" "About Me" "subtitle" "Developer and Creator") }}
 
 <!-- About Text Section -->
 <section class="about-section about-intro">
