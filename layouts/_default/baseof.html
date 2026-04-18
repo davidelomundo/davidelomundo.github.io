@@ -14,10 +14,11 @@
     {{ $articleCard := resources.Get "css/ArticleCard.css" }}
     {{ $projectCard := resources.Get "css/ProjectCard.css" }}
     {{ $homePage := resources.Get "css/HomePage.css" }}
+    {{ $projectsPage := resources.Get "css/ProjectsPage.css" }}
     {{ $aboutPage := resources.Get "css/AboutPage.css" }}
     {{ $articlePage := resources.Get "css/ArticlePage.css" }}
     {{ $contactPage := resources.Get "css/ContactPage.css" }}
-    {{ $css := slice $variables $global $navbar $footer $articleCard $projectCard $homePage $aboutPage $articlePage $contactPage | resources.Concat "css/bundle.css" | resources.Minify }}
+    {{ $css := slice $variables $global $navbar $footer $articleCard $projectCard $homePage $projectsPage $aboutPage $articlePage $contactPage | resources.Concat "css/bundle.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>

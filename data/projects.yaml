@@ -5,7 +5,7 @@ projects:
     date: "March 2025"
     title: "Image Generation from EEG Signals"
     subtitle: "Deep Learning models to generate and enhance images from brain signals"
-    description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals. A two-stage approach was adopted: a GAN for low-resolution image generation and the Enhanced Deep Residual Network (EDSR) for super-resolution."
+    description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals. A two-stage approach was adopted: a GAN for low-resolution image generation (32×32 pixels) and the Enhanced Deep Residual Network (EDSR) for super-resolution up to 128×128 pixels. The EDSR model was trained using the DIV2K dataset and evaluated with PSNR and SSIM metrics."
     technologies:
       - "PyTorch"
       - "Generative Adversarial Networks (GAN)"
