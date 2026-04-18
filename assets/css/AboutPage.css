@@ -228,7 +228,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 113, 227, 0.45);
+  border: none;
   background: rgba(0, 113, 227, 0.12);
   color: var(--color-blue);
   display: inline-flex;
@@ -247,11 +247,6 @@
 
 .timeline-content.is-expanded .timeline-toggle-icon {
   transform: rotate(180deg);
-}
-
-.timeline-content:hover .timeline-toggle-btn {
-  background: rgba(0, 113, 227, 0.18);
-  border-color: rgba(0, 113, 227, 0.6);
 }
 
 .timeline-toggle-btn:focus-visible {
@@ -281,7 +276,11 @@
   pointer-events: none;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-content.is-expanded::before {
+  opacity: 1;
 }
 
 .timeline-content > :not(.timeline-toggle-btn) {
@@ -376,13 +375,7 @@
   }
 
   .timeline-toggle-btn {
-    border-color: rgba(10, 132, 255, 0.45);
     background: rgba(10, 132, 255, 0.16);
-  }
-
-  .timeline-content:hover .timeline-toggle-btn {
-    border-color: rgba(10, 132, 255, 0.65);
-    background: rgba(10, 132, 255, 0.24);
   }
 
   .timeline-item:hover .timeline-content {
@@ -453,35 +446,41 @@
   }
 
   .timeline {
-    --timeline-date-column: 1fr;
-    --timeline-track-column: 0px;
+    --timeline-date-column: 0px;
+    --timeline-track-column: 30px;
+    --timeline-column-gap: 12px;
     gap: var(--spacing-2);
   }
 
-  .timeline::before,
-  .timeline-marker {
-    display: none;
+  .timeline::before {
+    left: calc(var(--timeline-track-column) / 2);
   }
 
   .timeline-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: var(--timeline-track-column) minmax(0, 1fr);
     row-gap: 6px;
   }
 
-  .timeline-period {
+  .timeline-marker {
     grid-column: 1;
+  }
+
+  .timeline-period {
+    grid-column: 2;
     text-align: left;
-    padding-top: 0;
-    font-size: 12px;
+    padding-top: 14px;
+    font-size: 11px;
+    margin-bottom: 6px;
   }
 
   .timeline-content {
-    grid-column: 1;
+    grid-column: 2;
     padding: 16px var(--spacing-2);
-    padding-right: 48px;
+    padding-right: 40px;
+    margin-top: -10px;
   }
 
   .timeline-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
