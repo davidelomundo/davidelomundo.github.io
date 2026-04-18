@@ -9,7 +9,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--spacing-5);
 }
 
@@ -18,13 +18,19 @@
     padding: var(--spacing-5) 0 0 0;
   }
 
+  .projects-featured .project-card-featured-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
   .projects-grid-section {
     padding: 0 0 var(--spacing-5) 0;
     margin-top: var(--spacing-3);
   }
 
   .projects-grid {
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--spacing-3);
