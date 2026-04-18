@@ -1,6 +1,10 @@
 <script>
 (function() {
     const flipContainers = document.querySelectorAll('.project-card-flip');
+    if (flipContainers.length === 0) {
+        return;
+    }
+
     const FLIP_ANIMATION_FALLBACK_MS = 900;
     const flipTimers = new WeakMap();
 
@@ -32,8 +36,6 @@
     }
     
     flipContainers.forEach(container => {
-        // Make the card clickable
-        container.style.cursor = 'pointer';
         setAnimating(container, false);
 
         container.addEventListener('transitionend', function(e) {
@@ -54,8 +56,7 @@
             if (e.target.closest('a')) {
                 return;
             }
-            
-            e.preventDefault();
+
             const isFlipped = this.getAttribute('data-flipped') === 'true';
             setFlippedState(this, !isFlipped);
         });

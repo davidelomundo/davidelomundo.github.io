@@ -16,7 +16,7 @@
 }
 
 .footer-social a {
-  font-size: 24px;
+  font-size: var(--font-size-2xl);
   color: var(--color-text);
   text-decoration: none;
   transition: color 0.3s;
@@ -37,18 +37,12 @@
 .footer-bottom p {
   margin: 0;
   color: var(--color-text-secondary);
-  font-size: 12px;
+  font-size: var(--font-size-sm);
 }
 
 @media (max-width: 768px) {
   .footer {
     padding: var(--spacing-3) 0 var(--spacing-2);
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-4);
-    margin-bottom: var(--spacing-4);
   }
 
   .footer-bottom {

@@ -41,7 +41,7 @@
 }
 
 .about-text p {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 1.8;
 }
 
@@ -99,7 +99,7 @@
 .skill-row[data-accent="green"] .skill-accent { background-color: #30d158; }
 
 .skill-category {
-  font-size: 15px;
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text);
   margin: 0;
@@ -115,7 +115,7 @@
 
 .skill-pill {
   color: var(--color-text-secondary);
-  font-size: 14px;
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   padding: 6px 14px;
   border-radius: 980px;
@@ -266,7 +266,7 @@
 }
 
 .timeline-toggle-icon {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   line-height: 1;
   transition: transform 0.25s ease;
 }
@@ -330,7 +330,7 @@
   display: block;
   text-align: right;
   padding-top: 14px;
-  font-size: 12px;
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-blue);
   line-height: 1.35;
@@ -339,7 +339,7 @@
 }
 
 .timeline-title {
-  font-size: 22px;
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   margin: 0 0 6px 0;
@@ -349,7 +349,7 @@
 }
 
 .timeline-company {
-  font-size: 13px;
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   color: var(--color-blue);
   margin: 0 0 10px 0;
@@ -359,7 +359,7 @@
 }
 
 .timeline-description {
-  font-size: 15px;
+  font-size: var(--font-size-base);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin: 0;
@@ -379,7 +379,7 @@
   color: var(--color-text);
   padding: 4px 10px;
   border-radius: 14px;
-  font-size: 11px;
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.2px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -439,10 +439,6 @@
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 32px;
-  }
-
   .about-intro-content {
     grid-template-columns: 1fr;
   }
@@ -492,7 +488,7 @@
     text-align: left;
     padding-top: 0;
     padding-left: var(--spacing-2);
-    font-size: 12px;
+    font-size: var(--font-size-sm);
     margin-bottom: 8px;
     font-weight: var(--font-weight-bold);
     color: var(--color-blue);
@@ -508,12 +504,12 @@
   }
 
   .timeline-title {
-    font-size: 18px;
+    font-size: var(--font-size-lg);
     margin: 0 0 8px 0;
   }
 
   .timeline-company {
-    font-size: 12px;
+    font-size: var(--font-size-sm);
     margin: 0 0 10px 0;
   }
 }

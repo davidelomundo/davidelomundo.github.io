@@ -16,7 +16,7 @@
 }
 
 .contact-info-title {
-  font-size: 40px;
+  font-size: var(--font-size-heading-lg);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   margin: 0;
@@ -24,7 +24,7 @@
 }
 
 .contact-info-text {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin: 0;
@@ -38,7 +38,7 @@
 }
 
 .contact-detail h3 {
-  font-size: 14px;
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-secondary);
   margin: 0 0 4px 0;
@@ -47,7 +47,7 @@
 }
 
 .contact-detail p {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   color: var(--color-text);
   margin: 0;
 }
@@ -55,6 +55,6 @@
 /* Mobile view (≤768px) */
 @media (max-width: 768px) {
   .contact-info-title {
-    font-size: 32px;
+    font-size: var(--font-size-3xl);
   }
 }
