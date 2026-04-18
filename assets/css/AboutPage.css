@@ -185,19 +185,45 @@
   width: 12px;
   height: 12px;
   background-color: var(--color-blue);
-  border: 2px solid var(--color-card-bg);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--timeline-pulse-ring);
-  animation: timeline-dot-pulse 2.2s ease-in-out infinite;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
 }
 
-@keyframes timeline-dot-pulse {
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  opacity: 0;
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 3px var(--timeline-pulse-ring);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 7px rgba(0, 113, 227, 0.08);
+    transform: scale(1.1);
+    box-shadow: 0 0 0 8px rgba(0, 122, 255, 0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
   }
 }
 
@@ -277,10 +303,6 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.timeline-content.is-expanded::before {
-  opacity: 1;
 }
 
 .timeline-content > :not(.timeline-toggle-btn) {
@@ -449,7 +471,7 @@
     --timeline-date-column: 0px;
     --timeline-track-column: 30px;
     --timeline-column-gap: 12px;
-    gap: var(--spacing-2);
+    gap: var(--spacing-4);
   }
 
   .timeline::before {
@@ -468,19 +490,31 @@
   .timeline-period {
     grid-column: 2;
     text-align: left;
-    padding-top: 14px;
-    font-size: 11px;
-    margin-bottom: 6px;
+    padding-top: 0;
+    padding-left: var(--spacing-2);
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
   }
 
   .timeline-content {
     grid-column: 2;
     padding: 16px var(--spacing-2);
     padding-right: 40px;
-    margin-top: -10px;
+    margin-top: 0;
   }
 
   .timeline-title {
     font-size: 18px;
+    margin: 0 0 8px 0;
+  }
+
+  .timeline-company {
+    font-size: 12px;
+    margin: 0 0 10px 0;
+  }
   }
 }
