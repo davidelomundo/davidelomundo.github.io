@@ -32,7 +32,7 @@ projects:
     date: "February 2026"
     title: "PlayStation Blog Notifier"
     subtitle: "Backend service that scrapes PlayStation Blog and posts to Telegram"
-    description: "A stateless backend service written in Go that scrapes the official PlayStation Blog, stores articles in PostgreSQL, and sends formatted Telegram posts for newly published articles. The system is containerized with Docker and designed to run on scheduled intervals."
+    description: "A stateless backend service written in Go that scrapes the official PlayStation Blog, stores articles in PostgreSQL, and sends Telegram posts for newly published articles. The system is containerized with Docker and designed to run on scheduled intervals."
     technologies:
       - "Go"
       - "PostgreSQL"
