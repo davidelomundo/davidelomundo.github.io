@@ -181,6 +181,8 @@
 .project-card-separator {
   color: var(--color-text-secondary);
   font-weight: 300;
+  font-size: var(--font-size-xl);
+  line-height: 1;
 }
 
 .project-card-date {
@@ -271,7 +273,7 @@
 }
 
 .project-card-back-title {
-  font-size: var(--font-size-2xl-plus);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   margin: 0 0 var(--spacing-3) 0;
@@ -347,11 +349,15 @@
   }
 
   .project-card-featured .project-card-description {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .project-card-description {
+    font-size: var(--font-size-sm);
   }
 
   .project-card-back-content {
-    padding: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3) var(--spacing-3) var(--spacing-3);
   }
 
   .project-card-back-title {
@@ -364,11 +370,11 @@
   }
 
   .detail-section p {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
   }
 
   .project-card:not(.project-card-featured) .project-card-image-wrapper {
-    height: 200px;
+    height: 160px;
   }
 
   .project-card-content {
@@ -385,6 +391,10 @@
 
   .project-card-category {
     font-size: var(--font-size-xxs);
+  }
+
+  .project-card-separator {
+    font-size: var(--font-size-base);
   }
 
   .project-card-date {
@@ -420,11 +430,11 @@
   }
 
   .project-card-back-content {
-    padding: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3) var(--spacing-3) var(--spacing-3);
   }
 
   .project-card-back-title {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     margin: var(--spacing-2) 0 var(--spacing-2) 0;
   }
 
@@ -446,6 +456,10 @@
 
   .project-card-category {
     font-size: var(--font-size-xxs);
+  }
+
+  .project-card-separator {
+    font-size: var(--font-size-sm);
   }
 
   .project-card-date {
