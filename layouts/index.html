@@ -37,7 +37,7 @@
         <div class="articles-grid">
             {{ $journalPages := where .Site.RegularPages "Section" "journal" }}
             {{ $publishedJournalPages := where $journalPages "Draft" false }}
-            {{ range first 3 $publishedJournalPages }}
+            {{ range first 2 $publishedJournalPages }}
                 {{ partial "article-card.html" . }}
             {{ end }}
         </div>
