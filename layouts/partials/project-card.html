@@ -31,7 +31,7 @@
             <div class="project-card-back-content">
                 <div class="project-card-back-details">
                     <div class="detail-section detail-section-description">
-                        <p>{{ $project.description }}</p>
+                        <p>{{ $project.description | safeHTML }}</p>
                     </div>
                     <div class="detail-section detail-section-technologies">
                         <h4>Technologies</h4>

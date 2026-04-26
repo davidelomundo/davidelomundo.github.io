@@ -1,11 +1,11 @@
 projects:
-  - id: 1
+  - id: 5
     image: "/images/projects/image-generation.jpeg"
     category: "FEATURED PROJECT"
     date: "March 2025"
     title: "Image Generation from EEG Signals"
     subtitle: "Deep Learning models to generate and enhance images from brain signals"
-    description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals. A two-stage approach was adopted: a GAN for low-resolution image generation and the Enhanced Deep Residual Network (EDSR) for super-resolution. The EDSR model was trained using the DIV2K dataset and evaluated with PSNR and SSIM metrics."
+    description: "This project explores the use of Deep Learning models to generate and enhance images from EEG signals.<br>A two-stage approach was adopted: a GAN for low-resolution image generation and the EDSR for super-resolution. The EDSR model was trained using the DIV2K dataset and evaluated with PSNR and SSIM metrics."
     technologies:
       - "PyTorch"
       - "GAN"
@@ -13,13 +13,13 @@ projects:
     github: "https://github.com/davidelomundo/eeg-to-image"
     featured: true
     
-  - id: 2
+  - id: 4
     image: "/images/projects/portfolio-website.jpeg"
     category: "WEBSITE"
-    date: "February 2026"
+    date: "April 2026"
     title: "Personal Portfolio"
     subtitle: "The current website you are viewing"
-    description: "Built with Hugo static site generator for blazing fast performance and easy deployment. "
+    description: "Built with Hugo static site generator for blazing fast performance and easy deployment.<br>Inspired by Apple's minimalist design philosophy and focus on user experience."
     technologies:
       - "Hugo"
       - "CSS"
@@ -32,7 +32,7 @@ projects:
     date: "February 2026"
     title: "PlayStation Blog Notifier"
     subtitle: "Backend service that scrapes PlayStation Blog and posts to Telegram"
-    description: "A stateless backend service written in Go that scrapes the official PlayStation Blog, stores articles in PostgreSQL, and sends Telegram posts for newly published articles. The system is containerized with Docker and designed to run on scheduled intervals."
+    description: "A stateless backend service written in Go that scrapes the official PlayStation Blog, stores articles in PostgreSQL, and sends Telegram posts for newly published articles.<br>The system is containerized with Docker and designed to run on scheduled intervals."
     technologies:
       - "Go"
       - "PostgreSQL"
@@ -40,7 +40,7 @@ projects:
       - "Telegram API"
     featured: false
     
-  - id: 4
+  - id: 2
     image: "/images/projects/racconti-invisibili.jpeg"
     category: "INTERACTIVE EXHIBITION"
     date: "July 2021"
@@ -54,7 +54,7 @@ projects:
     website: "https://www.visitfermo.it/en/events/racconti-invisibili"
     featured: false
     
-  - id: 5
+  - id: 1
     image: "/images/projects/instantflow.jpeg"
     category: "WEB APPLICATION"
     date: "June 2021"
