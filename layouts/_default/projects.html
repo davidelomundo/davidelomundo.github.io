@@ -1,21 +1,11 @@
 {{ define "main" }}
-<header class="projects-hero">
-    <div class="container">
-        <div class="projects-hero-content">
-            <h1 class="projects-hero-title">Projects</h1>
-            <p class="projects-hero-subtitle">
-                Building innovative solutions that make a difference
-            </p>
-        </div>
-    </div>
-</header>
+{{ partial "page-hero.html" (dict "title" "Projects" "subtitle" "Building innovative solutions that make a difference") }}
 
 <!-- Featured Project -->
-{{ $featuredProject := (index (where .Site.Data.projects.projects "featured" true) 0) }}
-{{ if $featuredProject }}
+{{ with partial "featured-project.html" . }}
 <section class="projects-featured">
     <div class="container">
-        {{ partial "project-card.html" (dict "project" $featuredProject "featured" true) }}
+        {{ . }}
     </div>
 </section>
 {{ end }}
@@ -24,10 +14,9 @@
 <section class="projects-grid-section">
     <div class="container">
         <div class="projects-grid">
-            {{ range .Site.Data.projects.projects }}
-                {{ if not .featured }}
-                    {{ partial "project-card.html" (dict "project" . "featured" false) }}
-                {{ end }}
+            {{ $otherProjects := where hugo.Data.projects.projects "featured" "!=" true }}
+            {{ range $otherProjects }}
+                {{ partial "project-card.html" (dict "project" . "featured" false) }}
             {{ end }}
         </div>
     </div>

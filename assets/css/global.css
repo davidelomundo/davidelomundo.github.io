@@ -70,9 +70,30 @@ p {
   line-height: 1.6;
 }
 
+/* Shared section heading */
+.section-title {
+  font-size: var(--font-size-heading-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: var(--font-size-heading-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--spacing-5);
 }
@@ -83,11 +104,54 @@ p {
   }
 }
 
+/* Shared page hero */
+.page-hero {
+  background-color: var(--color-surface);
+  padding: 100px 0 80px;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.3s ease;
+}
+
+.page-hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-hero-title {
+  font-size: var(--font-size-display-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-3) 0;
+  letter-spacing: -0.03em;
+}
+
+.page-hero-subtitle {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 80px 0 60px;
+  }
+
+  .page-hero-title {
+    font-size: var(--font-size-heading-xl);
+  }
+
+  .page-hero-subtitle {
+    font-size: var(--font-size-xl);
+  }
+}
+
 /* Buttons */
 .btn {
   padding: 16px 32px;
   border-radius: 980px;
-  font-size: 17px;
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
   transition: var(--transition);
@@ -115,19 +179,13 @@ p {
 
 .btn-secondary {
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.download-icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
+  background-color: var(--color-hover);
+  color: var(--color-blue);
 }
 
 /* Fade in animation for loaded content */
@@ -140,8 +198,19 @@ p {
   }
 }
 
-.projects-grid,
 .article-card,
 .project-card {
   animation: fadeIn 0.3s ease-out;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+.app-container > main {
+  flex: 1;
 }

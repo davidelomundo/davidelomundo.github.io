@@ -1,0 +1,65 @@
+<script>
+(function() {
+    const flipContainers = document.querySelectorAll('.project-card-flip');
+    if (flipContainers.length === 0) {
+        return;
+    }
+
+    const FLIP_ANIMATION_FALLBACK_MS = 900;
+    const flipTimers = new WeakMap();
+
+    function clearFlipTimer(container) {
+        const timer = flipTimers.get(container);
+        if (timer) {
+            window.clearTimeout(timer);
+        }
+    }
+
+    function setAnimating(container, isAnimating) {
+        container.setAttribute('data-animating', isAnimating ? 'true' : 'false');
+    }
+
+    function setFlippedState(container, shouldFlip) {
+        const nextState = shouldFlip ? 'true' : 'false';
+        if (container.getAttribute('data-flipped') === nextState) {
+            return;
+        }
+
+        setAnimating(container, true);
+        container.setAttribute('data-flipped', nextState);
+
+        clearFlipTimer(container);
+        const timer = window.setTimeout(function() {
+            setAnimating(container, false);
+        }, FLIP_ANIMATION_FALLBACK_MS);
+        flipTimers.set(container, timer);
+    }
+    
+    flipContainers.forEach(container => {
+        setAnimating(container, false);
+
+        container.addEventListener('transitionend', function(e) {
+            if (e.target !== container || e.propertyName !== 'transform') {
+                return;
+            }
+
+            clearFlipTimer(container);
+            setAnimating(container, false);
+        });
+        
+        container.addEventListener('click', function(e) {
+            if (this.getAttribute('data-animating') === 'true') {
+                return;
+            }
+            
+            // Don't flip if clicking on links
+            if (e.target.closest('a')) {
+                return;
+            }
+
+            const isFlipped = this.getAttribute('data-flipped') === 'true';
+            setFlippedState(this, !isFlipped);
+        });
+    });
+})();
+</script>

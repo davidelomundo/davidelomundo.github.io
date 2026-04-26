@@ -1,15 +1,8 @@
 {{ define "main" }}
-<header class="about-hero">
-    <div class="container">
-        <div class="about-hero-content">
-            <h1 class="about-hero-title">About Me</h1>
-            <p class="about-hero-subtitle">Developer and Creator</p>
-        </div>
-    </div>
-</header>
+{{ partial "page-hero.html" (dict "title" "About Me" "subtitle" "Developer and Creator") }}
 
 <!-- About Text Section -->
-<section class="about-section about-intro">
+<section class="about-section">
     <div class="container">
         <div class="about-intro-content">
             <div class="about-photo-wrapper">
@@ -19,21 +12,11 @@
                     class="about-photo"
                 />
             </div>
-            <div class="about-text-container">
-                <div class="about-text">
-                    <p>I'm a passionate software engineer with an interest in building innovative solutions 
-                    that make a real impact. With a background in computer science and a love for clean and efficient code, I strive to create applications that are both functional and beautiful.</p>
-                    
-                    <p>I strongly believe that the union of technology, health and nature can improve people's lives.</p>
-                </div>
-                <!--<a href="/resume/Davide_Lo_Mundo_Resume.pdf" download class="btn btn-primary">
-                    <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    Download Resume
-                </a>-->
+            <div class="about-text">
+                <p>I'm a passionate software engineer with an interest in building innovative solutions 
+                that make a real impact. With a background in computer science and a love for clean and efficient code, I strive to create applications that are both functional and beautiful.</p>
+                
+                <p>I strongly believe that the union of technology, health and nature can improve people's lives.</p>
             </div>
         </div>
     </div>
@@ -62,8 +45,8 @@
                 </div>
                 <div class="skill-items">
                     <span class="skill-pill">React</span>
-                    <span class="skill-pill">Tailwind CSS</span>
                     <span class="skill-pill">TypeScript</span>
+                    <span class="skill-pill">Hugo</span>
                 </div>
             </div>
             <div class="skill-row" data-accent="purple">
@@ -74,6 +57,7 @@
                 <div class="skill-items">
                     <span class="skill-pill">PyTorch</span>
                     <span class="skill-pill">Deep Learning</span>
+                    <span class="skill-pill">MCP</span>
                 </div>
             </div>
             <div class="skill-row" data-accent="orange">
@@ -103,28 +87,80 @@
 </section>
 
 <!-- Experience Section -->
-<section class="about-section about-timeline">
+<section class="about-section">
     <div class="container">
         <h2 class="section-title">Work Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
+                <div class="timeline-period">Dec 2025 - Present</div>
                 <div class="timeline-marker">
                     <div class="timeline-dot"></div>
                 </div>
-                <div class="timeline-period">2025 - Present</div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title">Application Monitoring Engineer</h3>
+                    <button class="timeline-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle details">
+                        <i class="fas fa-chevron-down timeline-toggle-icon" aria-hidden="true"></i>
+                    </button>
+                    <h3 class="timeline-title">Application Monitoring Engineer - Apprenticeship</h3>
                     <p class="timeline-company">Elmec Informatica</p>
-                    <p class="timeline-description">
-                        Working on application monitoring and observability in production environments, focusing on alerting and performance analysis.
-                    </p>
-                    <div class="timeline-technologies">
-                        <span class="technology-tag">Go</span>
-                        <span class="technology-tag">Django</span>
-                        <span class="technology-tag">New Relic</span>
-                        <span class="technology-tag">Opsgenie</span>
-                        <span class="technology-tag">Docker</span>
-                        <span class="technology-tag">PostgreSQL</span>
+                    <div class="timeline-details">
+                        <p class="timeline-description">
+                            Development of new software features and code changes. Design and implementation of MCP servers integrated into the observability architecture to extend monitoring capabilities.
+                        </p>
+                        <div class="timeline-technologies">
+                            <span class="technology-tag">Go</span>
+                            <span class="technology-tag">Python</span>
+                            <span class="technology-tag">MCP</span>
+                            <span class="technology-tag">New Relic</span>
+                            <span class="technology-tag">Opsgenie</span>
+                            <span class="technology-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-period">Jun 2025 - Nov 2025</div>
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                    <button class="timeline-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle details">
+                        <i class="fas fa-chevron-down timeline-toggle-icon" aria-hidden="true"></i>
+                    </button>
+                    <h3 class="timeline-title">Application Monitoring Engineer - Internship</h3>
+                    <p class="timeline-company">Elmec Informatica</p>
+                    <div class="timeline-details">
+                        <p class="timeline-description">
+                            Working on application monitoring and observability in production environments, focusing on alerting and performance analysis.
+                        </p>
+                        <div class="timeline-technologies">
+                            <span class="technology-tag">Go</span>
+                            <span class="technology-tag">Django</span>
+                            <span class="technology-tag">New Relic</span>
+                            <span class="technology-tag">Docker</span>
+                            <span class="technology-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-period">Apr 2024 - Sep 2024</div>
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                    <button class="timeline-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle details">
+                        <i class="fas fa-chevron-down timeline-toggle-icon" aria-hidden="true"></i>
+                    </button>
+                    <h3 class="timeline-title">Research Intern in Deep Learning</h3>
+                    <p class="timeline-company">University of Insubria</p>
+                    <div class="timeline-details">
+                        <p class="timeline-description">
+                            Training and implementation of deep learning models for image synthesis and evaluation on medical datasets.
+                        </p>
+                        <div class="timeline-technologies">
+                            <span class="technology-tag">PyTorch</span>
+                            <span class="technology-tag">Computer Vision</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,61 +169,132 @@
 </section>
 
 <!-- Education Section -->
-<section class="about-section about-timeline">
+<section class="about-section">
     <div class="container">
         <h2 class="section-title">Education</h2>
         <div class="timeline">
             <div class="timeline-item">
+                <div class="timeline-period">2025 - Present</div>
                 <div class="timeline-marker">
                     <div class="timeline-dot"></div>
                 </div>
-                <div class="timeline-period">2025 - Present</div>
                 <div class="timeline-content">
+                    <button class="timeline-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle details">
+                        <i class="fas fa-chevron-down timeline-toggle-icon" aria-hidden="true"></i>
+                    </button>
                     <h3 class="timeline-title">Master's Degree in Artificial Intelligence</h3>
                     <p class="timeline-company">University of Trento</p>
-                    <p class="timeline-description">
-                        Focus on software engineering and artificial intelligence.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-period">2021 - 2024</div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Bachelor's Degree in Computer Science</h3>
-                    <p class="timeline-company">University of Insubria</p>
-                    <p class="timeline-description">
-                        Foundation in programming, algorithms, and data structures.
-                    </p>
-                    <div class="timeline-technologies">
-                        <span class="technology-tag">Java</span>
-                        <span class="technology-tag">PostgreSQL</span>
-                        <span class="technology-tag">Python</span>
+                    <div class="timeline-details">
+                        <p class="timeline-description">
+                            Specialization in artificial intelligence with a focus on computer vision.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="timeline-item">
+                <div class="timeline-period">Aug 2026 - Jul 2027</div>
                 <div class="timeline-marker">
                     <div class="timeline-dot"></div>
                 </div>
-                <div class="timeline-period">2016 - 2021</div>
                 <div class="timeline-content">
+                    <button class="timeline-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle details">
+                        <i class="fas fa-chevron-down timeline-toggle-icon" aria-hidden="true"></i>
+                    </button>
+                    <h3 class="timeline-title">Erasmus+</h3>
+                    <p class="timeline-company">Norwegian University of Science and Technology</p>
+                    <div class="timeline-details">
+                        <p class="timeline-description">
+                            Erasmus+ student exchange program as part of the Master's degree.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-period">2021 - 2024</div>
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                    <button class="timeline-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle details">
+                        <i class="fas fa-chevron-down timeline-toggle-icon" aria-hidden="true"></i>
+                    </button>
+                    <h3 class="timeline-title">Bachelor's Degree in Computer Science</h3>
+                    <p class="timeline-company">University of Insubria</p>
+                    <div class="timeline-details">
+                        <p class="timeline-description">
+                            Foundation in programming, algorithms, and data structures.
+                        </p>
+                        <div class="timeline-technologies">
+                            <span class="technology-tag">Python</span>
+                            <span class="technology-tag">PostgreSQL</span>
+                            <span class="technology-tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-period">2016 - 2021</div>
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-content">
+                    <button class="timeline-toggle-btn" type="button" aria-expanded="false" aria-label="Toggle details">
+                        <i class="fas fa-chevron-down timeline-toggle-icon" aria-hidden="true"></i>
+                    </button>
                     <h3 class="timeline-title">High School Diploma in Information Technology and Telecommunications</h3>
                     <p class="timeline-company">ISIS J.M. Keynes</p>
-                    <p class="timeline-description">
-                        Scientific high school with a focus on mathematics and physics.
-                    </p>
-                    <div class="timeline-technologies">
-                        <span class="technology-tag">C++</span>
-                        <span class="technology-tag">C#</span>
-                        <span class="technology-tag">PHP</span>
-                        <span class="technology-tag">SQL</span>
+                    <div class="timeline-details">
+                        <p class="timeline-description">
+                            Extended practical and theoretical training in information technology and telecommunications.
+                        </p>
+                        <div class="timeline-technologies">
+                            <span class="technology-tag">C++</span>
+                            <span class="technology-tag">C#</span>
+                            <span class="technology-tag">PHP</span>
+                            <span class="technology-tag">MySQL</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var timelineCards = document.querySelectorAll(".timeline-content");
+
+    timelineCards.forEach(function (card, index) {
+        var button = card.querySelector(".timeline-toggle-btn");
+        var details = card.querySelector(".timeline-details");
+
+        if (!button || !details) {
+            return;
+        }
+
+        var detailsId = "timeline-details-" + (index + 1);
+        details.id = detailsId;
+        button.setAttribute("aria-controls", detailsId);
+
+        var setExpandedState = function (expanded) {
+            card.classList.toggle("is-expanded", expanded);
+            button.setAttribute("aria-expanded", String(expanded));
+        };
+
+        setExpandedState(false);
+
+        button.addEventListener("click", function (event) {
+            event.stopPropagation();
+            setExpandedState(!card.classList.contains("is-expanded"));
+        });
+
+        card.addEventListener("click", function (event) {
+            if (event.target.closest(".timeline-toggle-btn")) {
+                return;
+            }
+            setExpandedState(!card.classList.contains("is-expanded"));
+        });
+    });
+});
+</script>
 {{ end }}
