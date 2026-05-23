@@ -1,7 +1,7 @@
 projects:
   - id: 5
     image: "/images/projects/image-generation.jpeg"
-    category: "FEATURED PROJECT"
+    category: "AI RESEARCH"
     date: "March 2025"
     title: "Image Generation from EEG Signals"
     subtitle: "Deep Learning models to generate and enhance images from brain signals"
@@ -11,7 +11,6 @@ projects:
       - "GAN"
       - "EDSR"
     github: "https://github.com/davidelomundo/eeg-to-image"
-    featured: true
     
   - id: 4
     image: "/images/projects/portfolio-website.jpeg"
@@ -24,7 +23,6 @@ projects:
       - "Hugo"
       - "CSS"
     github: "https://github.com/davidelomundo/davidelomundo.github.io"
-    featured: false
     
   - id: 3
     image: "/images/projects/playstation-scraper.jpeg"
@@ -38,7 +36,6 @@ projects:
       - "PostgreSQL"
       - "Docker"
       - "Telegram API"
-    featured: false
     
   - id: 2
     image: "/images/projects/racconti-invisibili.jpeg"
@@ -52,7 +49,6 @@ projects:
       - "OpenCV"
       - "Python"
     website: "https://www.visitfermo.it/en/events/racconti-invisibili"
-    featured: false
     
   - id: 1
     image: "/images/projects/instantflow.jpeg"
@@ -67,4 +63,3 @@ projects:
       - "Apache 2"
       - "JavaScript"
     github: "https://github.com/davidelomundo/instantflow"
-    featured: false

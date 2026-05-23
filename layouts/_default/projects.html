@@ -14,7 +14,7 @@
 <section class="projects-grid-section">
     <div class="container">
         <div class="projects-grid">
-            {{ $otherProjects := where hugo.Data.projects.projects "featured" "!=" true }}
+            {{- $otherProjects := after 1 hugo.Data.projects.projects -}}
             {{ range $otherProjects }}
                 {{ partial "project-card.html" (dict "project" . "featured" false) }}
             {{ end }}

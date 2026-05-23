@@ -7,26 +7,22 @@ image: "/images/articles/norway.jpeg"
 excerpt: "One year in Trondheim embracing Norwegian culture and personal growth."
 ---
 
-<p class="lead">I am excited to announce that I'm starting my Erasmus exchange program in Trondheim, at the Norwegian University of Science and Technology. An opportunity to experience world-class education, stunning Nordic landscapes, and vibrant culture.</p>
+Today I'm ufficializing the start of my Erasmus exchange program in Trondheim, at the Norwegian University of Science and Technology.
 
-The program will last for one academic year, starting in August 2026 and ending in July 2027. I will be taking courses in Artificial Intelligence, which is my major at my home university.
+The program will last for one academic year (starting in August 2026 and ending in July 2027), during which I will take courses in Artificial Intelligence.
+It has been quite challenging to organize everything while balancing work and studies, especially while keeping this news under wraps from the public.
 
-## What I'm Looking Forward To
+## But Why Norway?
 
-What fascinates me most is discovering the Norwegian people themselves. From what I've learned, beneath their reserved exterior lies genuine warmth and a passion for sharing their culture and traditions with those they welcome.
+I chose Norway for several reasons: my love for nature and my desire to experience a culture different from Central Europe for an extended period. NTNU is also a highly regarded institution and a well-known center for academic research and innovation in AI.
+
+From what I’ve been told, it will be much more difficult to socialize there at first, but I'll take it as a challenge. I'm sure that Italian food and culture will be a great way to break the ice with my new classmates.
 
 Among the things I'm eager to discover:
 
-- The essence of "friluftsliv" (outdoor life)
-- How they balance work, life, and mental wellness differently than in other cultures
-- The vibrant café and cultural scene in Oslo and other cities
+- The essence of _friluftsliv_, a concept used to describe outdoor life
+- How Norwegians balance work, life, and mental well-being
 - Seeing the Northern Lights for the first time
 
-## Opportunities for Growth
-This exchange program is not just about academics, but also about personal growth and development. I hope to:
-
-- Improve my social skills
-- Improve my ability to express myself in English
-- Build lifelong friendships with people from around the world
-- Learn the Norwegian language
-- Develop a deeper understanding of global perspectives
+## Soft skills I want to develop
+This exchange program is not just about academics, but also about personal growth and development. I hope to improve my social skills and my ability to express myself in English, build lifelong friendships with people from around the world, and learn the Norwegian language.

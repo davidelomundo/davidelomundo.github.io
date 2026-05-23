@@ -1,33 +1,34 @@
 ---
 title: "Starting My Master's in AI"
-date: 2025-07-15
+date: 2025-09-15
 draft: false
 category: "Journal"
 image: "/images/articles/unitn.jpeg"
 excerpt: "A new path in my academic journey beginning at the University of Trento."
 ---
 
-<p class="lead">After thinking deeply for months about my academic and professional goals, I've decided to pursue a Master's degree in Artificial Intelligence at the University of Trento.</p>
+After thinking for months about my goals in life, I decided to apply for the Master's degree in Artificial Intelligence Systems at the University of Trento.
 
 ## Why Artificial Intelligence?
 
-My research internship at the University of Insubria exposed me to the depth and potential of deep learning, and I have to thank my thesis supervisors for proposing this opportunity. Working on image synthesis and evaluation models gave me a taste of what's possible, but also revealed how much more there is to learn.
+My research internship at the University of Insubria exposed me to the potential of deep learning, and I have to thank my supervisor for giving me the opportunity to work on such a project.
 
-A Master's degree in this field felt like the natural next step to deepen my expertise and contribute to advancements in AI.
+During that experience, I realized that many real-world problems and goals are not deterministic and cannot be effectively addressed without combining computer science and statistics.
+
+A Master's degree in this field felt like a natural next step to broaden my knowledge, without focusing solely on traditional computer science.
 
 The University of Trento stands out for several reasons:
 
-- **Comprehensive Curriculum**: Deep coverage of machine learning, deep learning, computer vision, and emerging AI topics
-- **Research Opportunities**: Access to state-of-the-art facilities and collaboration with leading researchers like Fondazione Bruno Kessler
-- **Industry Connections**: Strong ties with companies pushing the boundaries of AI innovation
+- **Study Program** has a deep coverage of AI and emerging topics.
+- Access and collaboration with leading **research centers** like Fondazione Bruno Kessler.
+- The university has strong ties with **industry** partners pushing the boundaries of AI and innovation.
 
 ## Looking Ahead
-
-As I embark on this journey, I'm filled with curiosity and determination. I aim to:
+While the degree will take more time than usual, as I will be balancing both work and study, I aim to:
 
 - Balance work and studies
-- Master advanced concepts in computer vision and deep learning
-- Contribute to meaningful research projects
-- Develop not just as a technologist, but as a critical thinker and innovator
+- Learn advanced concepts in computer vision and deep learning
+- Contribute to meaningful research projects with human evolution in mind
+- Become a critical thinker of AI
 
 It's the beginning of a new chapter and I can't wait to see where this path takes me.

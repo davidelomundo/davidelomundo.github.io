@@ -129,22 +129,50 @@
   }
 
   .article-title {
-    font-size: var(--font-size-heading-xl);
+    font-size: var(--font-size-heading-lg);
   }
 
   .article-content {
     padding: var(--spacing-5) 0;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
+    line-height: 1.65;
   }
 
   .article-content h2 {
     font-size: var(--font-size-2xl-plus);
   }
+
+  .article-content blockquote p {
+    font-size: var(--font-size-lg);
+  }
+
+  .article-category,
+  .article-date {
+    font-size: var(--font-size-sm);
+  }
 }
 
 /* Mobile view (≤768px) */
 @media (max-width: 768px) {
+  .article-title {
+    font-size: var(--font-size-3xl);
+  }
+
   .article-content {
     font-size: var(--font-size-base);
+    line-height: 1.6;
+  }
+
+  .article-content h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .article-content blockquote p {
+    font-size: var(--font-size-lg);
+  }
+
+  .article-category,
+  .article-date {
+    font-size: var(--font-size-sm);
   }
 }
