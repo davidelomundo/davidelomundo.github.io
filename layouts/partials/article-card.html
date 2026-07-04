@@ -1,6 +1,6 @@
 {{ $excerpt := .Params.excerpt | default (.Summary | plainify | truncate 160) }}
 
-<article class="article-card-container">
+<article class="article-card-container scroll-animate">
     <a href="{{ .RelPermalink }}" class="article-card{{ if not .Params.image }} article-card-no-image{{ end }}">
         {{ if .Params.image }}
         <div class="article-card-image-wrapper">

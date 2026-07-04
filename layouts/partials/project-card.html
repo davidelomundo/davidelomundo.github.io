@@ -1,7 +1,7 @@
 {{ $project := .project }}
 {{ $featured := .featured }}
 
-<article class="project-card-container{{ if $featured }} project-card-featured-container{{ end }}">
+<article class="project-card-container scroll-animate{{ if $featured }} project-card-featured-container{{ end }}">
     <div class="project-card-flip" data-flipped="false">
         <!-- Front of card -->
         <div class="project-card project-card-front{{ if $featured }} project-card-featured{{ end }}">

@@ -36,6 +36,7 @@
     {{ if or .IsHome (eq .Layout "projects") }}
     {{ partial "project-card-expand-script.html" . }}
     {{ end }}
+    {{ partial "scroll-animate-script.html" . }}
     {{ block "scripts" . }}{{ end }}
 </body>
 </html>

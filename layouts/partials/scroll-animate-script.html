@@ -1,0 +1,36 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var languageItems = document.querySelectorAll('.language-item');
+    var scrollAnimate = document.querySelectorAll('.scroll-animate');
+
+    if ((languageItems && languageItems.length) || (scrollAnimate && scrollAnimate.length)) {
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReduced) {
+            languageItems.forEach(function (item) {
+                var progress = item.querySelector('.language-progress');
+                if (progress) {
+                    var proficiency = progress.style.getPropertyValue('--proficiency') || getComputedStyle(progress).getPropertyValue('--proficiency');
+                    progress.style.width = proficiency || '0%';
+                }
+            });
+            scrollAnimate.forEach(function (el) { el.classList.add('in-view'); });
+        } else if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            languageItems.forEach(function (item) { observer.observe(item); });
+            scrollAnimate.forEach(function (item) { observer.observe(item); });
+        } else {
+            languageItems.forEach(function (item) { item.classList.add('in-view'); });
+            scrollAnimate.forEach(function (item) { item.classList.add('in-view'); });
+        }
+    }
+});
+</script>

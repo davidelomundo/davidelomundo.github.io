@@ -1,5 +1,5 @@
 projects:
-  - id: 5
+  - id: 6
     image: "/images/projects/image-generation.jpeg"
     category: "AI RESEARCH"
     date: "March 2025"
@@ -12,7 +12,7 @@ projects:
       - "EDSR"
     github: "https://github.com/davidelomundo/eeg-to-image"
     
-  - id: 4
+  - id: 5
     image: "/images/projects/portfolio-website.jpeg"
     category: "WEBSITE"
     date: "April 2026"
@@ -24,7 +24,7 @@ projects:
       - "CSS"
     github: "https://github.com/davidelomundo/davidelomundo.github.io"
     
-  - id: 3
+  - id: 4
     image: "/images/projects/playstation-scraper.jpeg"
     category: "BOT"
     date: "February 2026"
@@ -36,6 +36,18 @@ projects:
       - "PostgreSQL"
       - "Docker"
       - "Telegram API"
+
+  - id: 3
+    image: "/images/projects/emotionalsongs.jpeg"
+    category: "APPLICATION"
+    date: "September 2023"
+    title: "EmotionalSongs"
+    subtitle: "Application for collecting and analyzing emotional responses to music"
+    description: "A Java application that collects and analyzes users' emotional responses to songs using the Geneva Emotional Music Scales (GEMS). The system allows to associate emotional states with musical tracks and processes emotional indices to classify songs according to the intensity of the emotions they evoke."
+    technologies:
+      - "Java"
+      - "PostgreSQL"
+    github: "https://github.com/davidelomundo/EmotionalSongs"
     
   - id: 2
     image: "/images/projects/racconti-invisibili.jpeg"
