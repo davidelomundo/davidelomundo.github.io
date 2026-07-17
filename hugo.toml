@@ -1,5 +1,5 @@
 baseURL = 'https://davidelomundo.github.io/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'Davide Lo Mundo'
 cleanDestinationDir = true
 disableKinds = ['taxonomy', 'term']
